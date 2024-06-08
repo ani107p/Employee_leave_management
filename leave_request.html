@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leave Request</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="leave-request-container">
+        <form action="backend/leave_management.php" method="POST">
+            <h2>Submit Leave Request</h2>
+            <label for="leave_type">Leave Type:</label>
+            <select id="leave_type" name="leave_type">
+                <option value="vacation">Vacation</option>
+                <option value="sick_leave">Sick Leave</option>
+            </select>
+            <label for="start_date">Start Date:</label>
+            <input type="date" id="start_date" name="start_date" required>
+            <label for="end_date">End Date:</label>
+            <input type="date" id="end_date" name="end_date" required>
+            <label for="reason">Reason:</label>
+            <textarea id="reason" name="reason" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="scripts/leave.js"></script>
+</body>
+</html>
